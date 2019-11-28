@@ -1,8 +1,7 @@
-import { NgxsModule, Selector, State, StateContext, Store } from '@ngxs/store';
+import { NgxsModule, Store } from '@ngxs/store';
 import { TestBed } from '@angular/core/testing';
 import { TaggingState, UpdateTagging, TaggingStateModel } from './tagging-state';
 import { FileState } from './file-state';
-
 
 describe('TagAssignmentState', () => {
 
@@ -31,4 +30,4 @@ describe('TagAssignmentState', () => {
     const taggingStateModel: TaggingStateModel = store.selectSnapshot(TaggingState);
     expect(taggingStateModel.tagging).toEqual(activeFile);
   });
-})
+});
